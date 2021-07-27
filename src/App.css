@@ -1,28 +1,51 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 .header {
-  margin-left: 24px;
+  padding: 24px;
+  background: #ad1211;
+  color: white
 }
 
 .footer {
   text-align: center;
+  padding: 42px;
+  color: white;
+  background: #1b326e;
+
 }
 
 .search-container {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .search-bar {
   width: 750px;
   height: 50px;
   font-size: 32px;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #ed563c
 }
 
-.search-btn {
+.submit-btn {
   margin: 24px 0;
   color: white;
-  background: black;
+  background: #1b326e;
   padding: 12px 24px;
   font-size: 16px;
   border-style: none;
+  border-radius: 4px;
+  letter-spacing: 2px;
 }
 
 .representative-info {
@@ -32,4 +55,39 @@
 .office-title{
   font-weight: bold;
   text-transform: uppercase;
+}
+
+ul{
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  align-items: flex-start;
+}
+
+.menu-item a{
+  color: white;
+  font-size: 26px;
+  margin-right: 24px;
+  text-decoration: none;
+}
+
+.sign-up-container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px;
+}
+
+.form-label{
+  font-size: 36px;
+  margin: 16px;
+  float: right
+}
+
+.form-input {
+  height: 42px;
+  min-width: 250px;
+  font-size: 36px;
+  margin: 16px;
 }

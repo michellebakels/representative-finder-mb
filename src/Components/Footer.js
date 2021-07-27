@@ -1,6 +1,8 @@
 function Footer() {
     return(
-        <p className="footer">Made with love by Michelle Bakels</p>
+
+            <p className="footer">Made with love by Michelle Bakels</p>
+
     )
 }
 
