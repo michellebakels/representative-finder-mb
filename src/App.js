@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import RepresentativeSearch from "./Components/RepresentativeSearch";
 import './App.css'
 import SignUp from "./Components/SignUp";
+import SignIn from "./Components/SignIn";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
           <Header />
           <div>
               <Switch>
+                  <Route path="/signin">
+                      <SignIn />
+                  </Route>
                   <Route path="/signup">
                       <SignUp />
                   </Route>

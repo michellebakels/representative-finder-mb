@@ -1,17 +1,17 @@
-import {useState} from 'react'
+import {useState} from "react";
 
-function SignUp() {
+function SignIn() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const signUpUser = (e) => {
+    const signInUser = (e) => {
         e.preventDefault()
-        console.log('signing up...')
+        console.log('signing in...')
     }
 
     return(
         <div className="sign-up-container">
-            <form onSubmit={(e) => signUpUser(e)}>
+            <form onSubmit={(e) => signInUser(e)}>
                 <label className="form-label">
                     Email:&nbsp;
                     <input
@@ -45,4 +45,4 @@ function SignUp() {
     )
 }
 
-export default SignUp
+export default SignIn

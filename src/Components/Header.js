@@ -14,6 +14,11 @@ function Header() {
                         Sign Up
                     </Link>
                 </li>
+                <li className="menu-item">
+                    <Link to="/signin">
+                        Sign In
+                    </Link>
+                </li>
             </ul>
         </div>
     )
