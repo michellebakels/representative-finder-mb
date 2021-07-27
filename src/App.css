@@ -33,6 +33,17 @@
   margin: 24px;
 }
 
+.page-title {
+  font-family: 'Zen Loop', cursive;
+  font-size: 62px;
+  letter-spacing: 2px;
+}
+
+.home-description{
+  margin: 24px;
+  font-size: 24px;
+}
+
 .search-container {
   display: flex;
   flex-direction: column;

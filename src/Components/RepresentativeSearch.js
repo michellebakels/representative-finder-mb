@@ -21,7 +21,7 @@ function RepresentativeSearch() {
 
     return(
         <div className="search-container">
-            <h1>Search Representatives By Address</h1>
+            <h1 className="page-title">Search Representatives By Address</h1>
             <input
                 name="addressSearch"
                 type="text"

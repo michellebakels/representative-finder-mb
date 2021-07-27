@@ -11,7 +11,7 @@ function SignIn() {
 
     return(
         <div className="sign-up-container">
-            <h1>Sign In</h1>
+            <h1 className="page-title">Sign In</h1>
             <form onSubmit={(e) => signInUser(e)}>
                 <label className="form-label">
                     Email:&nbsp;
