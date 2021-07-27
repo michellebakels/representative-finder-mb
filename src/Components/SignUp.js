@@ -11,6 +11,7 @@ function SignUp() {
 
     return(
         <div className="sign-up-container">
+            <h1>Sign Up</h1>
             <form onSubmit={(e) => signUpUser(e)}>
                 <label className="form-label">
                     Email:&nbsp;

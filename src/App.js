@@ -2,9 +2,10 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Header from "./Components/Header"
 import Footer from "./Components/Footer";
 import RepresentativeSearch from "./Components/RepresentativeSearch";
-import './App.css'
 import SignUp from "./Components/SignUp";
 import SignIn from "./Components/SignIn";
+import Home from "./Components/Home";
+import './App.css'
 
 function App() {
   return (
@@ -19,8 +20,11 @@ function App() {
                   <Route path="/signup">
                       <SignUp />
                   </Route>
-                  <Route path="/">
+                  <Route path="/search">
                     <RepresentativeSearch/>
+                  </Route>
+                  <Route path="/">
+                    <Home />
                   </Route>
               </Switch>
           </div>
