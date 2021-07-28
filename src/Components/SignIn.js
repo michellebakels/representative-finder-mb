@@ -1,12 +1,28 @@
 import {useState} from "react";
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import {firebaseConfig} from '../config'
 
-function SignIn() {
+function SignIn({setUser}) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [loading, setLoading] = useState(false)
 
     const signInUser = (e) => {
         e.preventDefault()
-        console.log('signing in...')
+        setLoading(true)
+        if(!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig)
+        }
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(response => {
+                setLoading(false)
+                setUser(response.user)
+            })
+            .catch(err => {
+                setLoading(false)
+                alert(err.message)
+            })
     }
 
     return(
@@ -39,7 +55,7 @@ function SignIn() {
                     className="submit-btn"
                     type="submit"
                 >
-                    SUBMIT
+                    {loading ? 'Signing In...' : 'SUBMIT'}
                 </button>
             </form>
         </div>

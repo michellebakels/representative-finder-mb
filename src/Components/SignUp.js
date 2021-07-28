@@ -1,12 +1,28 @@
 import {useState} from 'react'
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import {firebaseConfig} from '../config'
 
-function SignUp() {
+function SignUp({setUser}) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [loading, setLoading] = useState(false)
 
     const signUpUser = (e) => {
         e.preventDefault()
-        console.log('signing up...')
+        setLoading(false)
+        if(!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig)
+        }
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(response => {
+                setLoading(false)
+                setUser(response.user)
+            })
+            .catch(err => {
+                setLoading(false)
+                alert(err.message)
+            })
     }
 
     return(
@@ -39,7 +55,7 @@ function SignUp() {
                     className="submit-btn"
                     type="submit"
                 >
-                    SUBMIT
+                    {loading ? 'Signing Up...' : 'SUBMIT'}
                 </button>
             </form>
         </div>
